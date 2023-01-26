@@ -1,0 +1,6 @@
+set timeout -1
+spawn /root/.emacs.d/bin/doom install
+match_max 100000
+expect "Generate an envvar file? (see `doom help env` for details) (y or n) " {send "y\r"}
+expect "Download and install all-the-icon's fonts? (y or n) " {send "y\r"}
+expect eof
